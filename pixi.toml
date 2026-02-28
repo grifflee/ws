@@ -37,13 +37,19 @@ clean = "bash -c 'cd $PIXI_PROJECT_ROOT && rm -rf build install log'"
 clean_xnodes = "bash -c 'cd $PIXI_PROJECT_ROOT && rm -rf build/xnodes install/xnodes'"
 
 setup = "bash -lc 'cd $PIXI_PROJECT_ROOT && source install/setup.bash'"
-[tasks.test]
-cmd = [ "pytest", ]
+[tasks.test-unit]
+cmd = [ "pytest", "-vv",]
 cwd = "src/xnodes"
 depends-on = [ "build_xnodes", "setup", ]
 
+[tasks.test-integration]
+cmd = "colcon test --packages-select xnodes --pytest-args -vv tests/integration && colcon test-result --all --verbose"
+cwd = "src/xnodes"
+env = { RCUTILS_LOGGING_SEVERITY = "DEBUG" }
+depends-on = [ "build_xnodes", "setup", ]
+
 [tasks.xlaunch]
-cmd = "ros2 launch"
+cmd = "ros2 launch xnodes"
 depends-on = [ "build_xnodes", "setup", ]
 
 
