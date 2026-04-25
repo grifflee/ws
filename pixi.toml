@@ -57,7 +57,6 @@ ROS_LOCALHOST_ONLY = "1"
 ROS_LOG_DIR = "/tmp/ros_log"
 RMW_IMPLEMENTATION = "rmw_fastrtps_cpp"
 FASTDDS_BUILTIN_TRANSPORTS = "UDPv4"
-COLCON_LOG_PATH = "/tmp/colcon_log"
 
 [tasks.xlaunch]
 cmd = "ros2 launch xnodes"
@@ -66,7 +65,9 @@ depends-on = [ "build_xnodes", "setup", ]
 
 
 [tasks.build_xnodes]
-cmd = "bash -lc 'cd $PIXI_PROJECT_ROOT && COLCON_LOG_PATH=/tmp/colcon_log colcon build --packages-select xnodes'"
+cmd = "bash -lc 'cd $PIXI_PROJECT_ROOT && COLCON_LOG_PATH=$HOME/.colcon/log colcon build --packages-select xnodes'"
+# clean first: colcon fails with "setup.py develop --uninstall not recognized" when a stale editable install exists (modern setuptools removed that flag)
+depends-on = ["clean_xnodes"]
 
 [tasks.init_xarm]
 cmd = "git submodule update --init --recursive && git pull --recurse-submodules"

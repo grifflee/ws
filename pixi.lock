@@ -2928,8 +2928,8 @@ packages:
   timestamp: 1715782983957
 - pypi: ../../../data/gello_software
   name: gello
-  version: 0.1.0
-  sha256: 082e4d54deb7e7c0348c96c159bc5d8c92d79a247ebf0d3521fcf3fb1cde0281
+  version: 0.0.1.dev20260421
+  sha256: 4673c7a6063b0731c6362e7a1301d24fbd67283c536adb26f1bf163da5924f8e
   requires_dist:
   - dm-control>=1.0.34
   - numpy-quaternion
