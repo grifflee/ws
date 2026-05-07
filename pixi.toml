@@ -20,7 +20,7 @@ scripts = [".pixi.sh"]
 
 [tasks]
 rqt = { cmd = "ros2 run rqt_image_view rqt_image_view" }
-build = {cmd = "cd $PIXI_PROJECT_ROOT && colcon build --symlink-install", inputs = ["src"]}
+build = {cmd = "cd $PIXI_PROJECT_ROOT && colcon build --cmake-args -DCMAKE_EXE_LINKER_FLAGS=-L$CONDA_PREFIX/lib -DCMAKE_SHARED_LINKER_FLAGS=-L$CONDA_PREFIX/lib -DCMAKE_MODULE_LINKER_FLAGS=-L$CONDA_PREFIX/lib", inputs = ["src"]}
 turtle = {cmd =  "ros2 run turtlesim turtlesim_node", inputs = ["src"]}
 
 init = "bash -c 'mkdir -p $PIXI_PROJECT_ROOT/src'"
@@ -36,8 +36,8 @@ clean_xnodes = "bash -c 'cd $PIXI_PROJECT_ROOT && rm -rf build/xnodes install/xn
 performance = {cmd = "bash -lc 'echo performance | sudo tee /sys/devices/system/cpu/cpu*/cpufreq/scaling_governor'"}
 xmove = {cmd = "ros2 launch xarm_moveit_config xarm6_moveit_fake.launch.py", inputs = ["src"]}
 xservo = {cmd = "ros2 launch xarm_moveit_servo xarm_moveit_servo_realmove.launch.py dof:=7 robot_ip:=192.168.1.231 add_gripper:=true report_type:=dev"}
-xservo-fake = {cmd = "ros2 launch xarm_moveit_servo xarm_moveit_servo_fake.launch.py dof:=7 add_gripper:=true", inputs = ["src"]}
-build_rs = { cmd = "bash -lc 'cd $PIXI_PROJECT_ROOT && colcon build --packages-select realsense2_camera_msgs realsense2_camera realsense2_description --cmake-args -DCMAKE_EXE_LINKER_FLAGS=-L$CONDA_PREFIX/lib -DCMAKE_SHARED_LINKER_FLAGS=-L$CONDA_PREFIX/lib'" }
+xservo-fake = {cmd = "ros2 launch xarm_moveit_servo xarm_moveit_servo_fake.launch.py dof:=7 add_gripper:=true", depends-on = ["build_xarm", "setup"]}
+build_rs = { cmd = "bash -lc 'cd $PIXI_PROJECT_ROOT && colcon build --packages-select realsense2_camera_msgs realsense2_camera realsense2_description --cmake-args -DCMAKE_PREFIX_PATH=$CONDA_PREFIX -DCMAKE_EXE_LINKER_FLAGS=-L$CONDA_PREFIX/lib -DCMAKE_SHARED_LINKER_FLAGS=-L$CONDA_PREFIX/lib'" }
 rs = { cmd = "ros2 launch realsense2_camera rs_launch.py" }
 realsense = { cmd = "ros2 launch realsense2_camera rs_launch.py" }
 
@@ -62,8 +62,6 @@ FASTDDS_BUILTIN_TRANSPORTS = "UDPv4"
 cmd = "ros2 launch xnodes"
 depends-on = [ "build_xnodes", "setup", ]
 
-
-
 [tasks.build_xnodes]
 cmd = "bash -lc 'cd $PIXI_PROJECT_ROOT && COLCON_LOG_PATH=$HOME/.colcon/log colcon build --packages-select xnodes'"
 # clean first: colcon fails with "setup.py develop --uninstall not recognized" when a stale editable install exists (modern setuptools removed that flag)
@@ -84,7 +82,6 @@ cmd = "bash -lc 'colcon build --base-paths $PIXI_PROJECT_ROOT/src/xarm_ros2 --cm
 # ==========
 
 [pypi-dependencies]
-evdev = "*"
 tyro = "*"
 rich = "*"
 vcstool = "*"
@@ -92,8 +89,8 @@ pupil-apriltags =  "*"
 pydantic = "*"
 scipy = ">=1.16.3, <2"
 webpolicy = { git = "https://github.com/mhyatt000/webpolicy.git", rev = "master" }
-# gello = {  git = "https://github.com/mhyatt000/gello_software.git",  rev = "858e83e" }
-gello = {  path = "src/gello" }
+gello = {  git = "https://github.com/mhyatt000/gello_software.git",  rev = "main" }
+#gello = {  path = "src/gello" }
 pynput = ">=1.8.1, <2"
 pyspacemouse = ">=2.0.0, <3"
 dynamixel-sdk = ">=4.0.3, <5"
@@ -103,7 +100,9 @@ opencv-python = "*"
 
 [dependencies]
 python = ">=3.11,<3.12"
+evdev = "*"
 pip = "*"
+setuptools = "<60"
 
 # Core ROS
 ros-humble-desktop = ">=0.10.0,<0.11"   # includes rviz2, tf2, rosbag2, etc.
@@ -121,6 +120,7 @@ ros-humble-xacro = "*"
 ros-humble-moveit-msgs = "*"            # xArm packages depend on this, even without MoveIt
 ros-humble-moveit = "*"
 ros-humble-apriltag-msgs = "*"          # only if your workspace references them
+apriltag = ">=3.2"
 ros-humble-gazebo-ros-pkgs = "*"
 gazebo = "*"
 
@@ -138,4 +138,7 @@ flax = ">=0.10.4,<0.11"
 ros-humble-moveit-servo = ">=2.5.7,<3"
 ros-humble-rosbag2-storage-mcap = ">=0.15.13,<0.16"
 ros-humble-diagnostic-updater = "*"
+ros-humble-generate-parameter-library = "*"
+ros-humble-ros-testing = "*"
 librealsense = "*"
+poco = "*"

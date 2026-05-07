@@ -21,6 +21,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/alsa-lib-1.2.15.1-hb03c661_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/ampl-asl-1.0.0-h5888daf_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/aom-3.9.1-hac33072_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/apriltag-3.4.5-py311h0372a8f_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/argcomplete-3.6.3-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/assimp-5.4.3-h8943939_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/at-spi2-atk-2.38.0-h0630a04_3.tar.bz2
@@ -104,6 +105,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/empy-3.3.4-pyh9f0ad1d_1.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/linux-64/epoxy-1.5.10-hb03c661_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/etils-1.12.2-pyhd8ed1ab_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/evdev-1.9.3-py311h49ec1c0_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/exceptiongroup-1.3.1-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/expat-2.7.3-hecca717_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/fcl-0.7.0-h543440a_8.conda
@@ -398,6 +400,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/pkg-config-0.29.2-h4bc722e_1009.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/pluggy-1.6.0-pyhf9edf01_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/ply-3.11-pyhd8ed1ab_3.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/poco-1.15.1-hbea8664_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/poppler-24.12.0-hd7b24de_2.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/poppler-data-0.4.12-hd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/postgresql-17.6-h021f68a_1.conda
@@ -689,6 +692,7 @@ environments:
       - conda: https://conda.anaconda.org/robostack-staging/linux-64/ros-humble-ros-base-0.10.0-np126py311h2c3b307_7.conda
       - conda: https://conda.anaconda.org/robostack-staging/linux-64/ros-humble-ros-core-0.10.0-np126py311h2c3b307_7.conda
       - conda: https://conda.anaconda.org/robostack-staging/linux-64/ros-humble-ros-environment-3.2.2-np126py311h2c3b307_7.conda
+      - conda: https://conda.anaconda.org/robostack-staging/linux-64/ros-humble-ros-testing-0.4.0-np126py311h2c3b307_7.conda
       - conda: https://conda.anaconda.org/robostack-staging/linux-64/ros-humble-ros-workspace-1.0.2-np126py311h2c3b307_9.conda
       - conda: https://conda.anaconda.org/robostack-staging/linux-64/ros-humble-ros2-control-2.47.0-np126py311h2c3b307_7.conda
       - conda: https://conda.anaconda.org/robostack-staging/linux-64/ros-humble-ros2-control-test-assets-2.47.0-np126py311h2c3b307_7.conda
@@ -709,6 +713,7 @@ environments:
       - conda: https://conda.anaconda.org/robostack-staging/linux-64/ros-humble-ros2pkg-0.18.11-np126py311h2c3b307_7.conda
       - conda: https://conda.anaconda.org/robostack-staging/linux-64/ros-humble-ros2run-0.18.11-np126py311h2c3b307_7.conda
       - conda: https://conda.anaconda.org/robostack-staging/linux-64/ros-humble-ros2service-0.18.11-np126py311h2c3b307_7.conda
+      - conda: https://conda.anaconda.org/robostack-staging/linux-64/ros-humble-ros2test-0.4.0-np126py311h2c3b307_7.conda
       - conda: https://conda.anaconda.org/robostack-staging/linux-64/ros-humble-ros2topic-0.18.11-np126py311h2c3b307_7.conda
       - conda: https://conda.anaconda.org/robostack-staging/linux-64/ros-humble-rosbag2-0.15.13-np126py311h2c3b307_7.conda
       - conda: https://conda.anaconda.org/robostack-staging/linux-64/ros-humble-rosbag2-compression-0.15.13-np126py311h2c3b307_7.conda
@@ -837,7 +842,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/linux-64/scipy-1.17.1-py311hbe70eeb_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/sdl2-2.32.54-h3f2d84a_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/sdl3-3.2.14-he3e324a_0.conda
-      - conda: https://conda.anaconda.org/conda-forge/noarch/setuptools-80.9.0-pyhff2d567_0.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/setuptools-59.8.0-py311h38be061_1.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/linux-64/simbody-3.7-h64f3f5a_3.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/linux-64/sip-6.10.0-py311h1ddb823_1.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/six-1.17.0-pyhe01879c_1.conda
@@ -866,6 +871,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/tzdata-2025c-h8577fbf_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/uncrustify-0.74.0-h27087fc_0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/linux-64/unicodedata2-17.0.0-py311h49ec1c0_1.conda
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/unixodbc-2.3.14-h69e2008_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/urdfdom-4.0.1-h2e5d1f2_2.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/urdfdom_headers-1.1.2-h84d6215_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/uriparser-0.9.8-hac33072_0.conda
@@ -942,7 +948,7 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/18/5b/50e4acc3cfccb4a502b6bc3b82eeb24b271740d97ef6ddb91746acebc095/dynamixel_sdk-4.0.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6a/c6/9511d6eb3814d6ddedcc036b084e2268f0a4153d35fd3191209b8bf13a5b/easyhid_ng-0.1.0-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/a8/9f/002e43ef95e58649ee194cd601dfba9104a8a26a4b4da41e1f08824a9110/eigenpy-3.5.1-0-cp311-cp311-manylinux_2_28_x86_64.whl
-      - pypi: https://files.pythonhosted.org/packages/a5/f5/397b61091120a9ca5001041dd7bf76c385b3bfd67a0e5bcb74b852bd22a4/evdev-1.9.3.tar.gz
+      - pypi: git+https://github.com/mhyatt000/gello_software.git?rev=main#f1dd3596ae1d3f68657182296a06a322dae86ca3
       - pypi: https://files.pythonhosted.org/packages/5a/3f/efeb7c6801c46e11bd666a5180f0d615f74f72264212f74f39586c6fda9d/glfw-2.10.0-py2.py27.py3.py30.py31.py32.py33.py34.py35.py36.py37.py38.py39.py310.py311.py312.py313.py314-none-manylinux_2_28_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/f6/fd/33aa4ec62b290477181c55bb1c9302c9698c58c0ce9a6ab4874abc8b0d60/google_crc32c-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl
       - pypi: https://files.pythonhosted.org/packages/eb/64/760c132e1418a4945b1cc61b2e5ad4d3b6b9e2353235ff6d1cf1982c517f/hpp_fcl-2.4.4-3-cp311-cp311-manylinux_2_28_x86_64.whl
@@ -984,7 +990,6 @@ environments:
       - pypi: https://files.pythonhosted.org/packages/40/0a/85b3df0fa6ddd4f1a9d23cd63948aa145797631c9e20d165ada8e13a058c/xarm_python_sdk-1.17.3-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/44/15/bb13b4913ef95ad5448490821eee4671d0e67673342e4d4070854e5fe081/zarr-3.1.5-py3-none-any.whl
       - pypi: https://files.pythonhosted.org/packages/6e/78/833b2808793c1619835edb1a4e17a023d5d625f4f97ff25ffff986d1f472/zmq-0.0.0.tar.gz
-      - pypi: ../../../data/gello_software
 packages:
 - conda: https://conda.anaconda.org/conda-forge/linux-64/_libgcc_mutex-0.1-conda_forge.tar.bz2
   sha256: fe51de6107f9edc7aa4f786a70f4a883943bc9d39b3bb7307c04c41410990726
@@ -1123,6 +1128,19 @@ packages:
   purls: []
   size: 2706396
   timestamp: 1718551242397
+- conda: https://conda.anaconda.org/conda-forge/linux-64/apriltag-3.4.5-py311h0372a8f_2.conda
+  sha256: b61f9c9be7f36786c25976716812d353a03e7ce0e6e2b4f6f41656c5f5fea046
+  md5: 91dcc19e104d538f5029f538973b22a5
+  depends:
+  - __glibc >=2.17,<3.0.a0
+  - libgcc >=14
+  - numpy >=1.23,<3
+  - python >=3.11,<3.12.0a0
+  - python_abi 3.11.* *_cp311
+  license: BSD-2-Clause-Views
+  purls: []
+  size: 1164650
+  timestamp: 1773299520206
 - conda: https://conda.anaconda.org/conda-forge/noarch/argcomplete-3.6.3-pyhd8ed1ab_0.conda
   sha256: a2a1879c53b7a8438c898d20fa5f6274e4b1c30161f93b7818236e9df6adffde
   md5: 8f37c8fb7116a18da04e52fa9e2c8df9
@@ -2491,11 +2509,20 @@ packages:
   - pkg:pypi/etils?source=hash-mapping
   size: 787805
   timestamp: 1741838050970
-- pypi: https://files.pythonhosted.org/packages/a5/f5/397b61091120a9ca5001041dd7bf76c385b3bfd67a0e5bcb74b852bd22a4/evdev-1.9.3.tar.gz
-  name: evdev
-  version: 1.9.3
-  sha256: 2c140e01ac8437758fa23fe5c871397412461f42d421aa20241dc8fe8cfccbc9
-  requires_python: '>=3.9'
+- conda: https://conda.anaconda.org/conda-forge/linux-64/evdev-1.9.3-py311h49ec1c0_0.conda
+  sha256: 9a0e8e6b626184ced4aa2549c7a58ae6ddfc57842c31c1a2ce33553c2e38df76
+  md5: 4f0d3fbe751431c77c4e4c3873c8cc4d
+  depends:
+  - __glibc >=2.17,<3.0.a0
+  - libgcc >=14
+  - python >=3.11,<3.12.0a0
+  - python_abi 3.11.* *_cp311
+  license: BSD-3-Clause
+  license_family: BSD
+  purls:
+  - pkg:pypi/evdev?source=hash-mapping
+  size: 117429
+  timestamp: 1770340701665
 - conda: https://conda.anaconda.org/conda-forge/noarch/exceptiongroup-1.3.1-pyhd8ed1ab_0.conda
   sha256: ee6cf346d017d954255bbcbdb424cddea4d14e4ed7e9813e429db1d795d01144
   md5: 8e662bd460bda79b1ea39194e3c4c9ab
@@ -2926,10 +2953,9 @@ packages:
   purls: []
   size: 528149
   timestamp: 1715782983957
-- pypi: ../../../data/gello_software
+- pypi: git+https://github.com/mhyatt000/gello_software.git?rev=main#f1dd3596ae1d3f68657182296a06a322dae86ca3
   name: gello
   version: 0.0.1.dev20260421
-  sha256: 4673c7a6063b0731c6362e7a1301d24fbd67283c536adb26f1bf163da5924f8e
   requires_dist:
   - dm-control>=1.0.34
   - numpy-quaternion
@@ -6904,6 +6930,20 @@ packages:
   - pkg:pypi/ply?source=hash-mapping
   size: 49052
   timestamp: 1733239818090
+- conda: https://conda.anaconda.org/conda-forge/linux-64/poco-1.15.1-hbea8664_0.conda
+  sha256: 0aa58b3d3b9b67a4c421cd3f78b3b9d2f70a29ed5816255bdab9b3bd7f1f6ad3
+  md5: 81f3753c84a4dca35bef3a6f6e5c02ef
+  depends:
+  - __glibc >=2.28,<3.0.a0
+  - libgcc >=14
+  - libstdcxx >=14
+  - openssl >=3.5.5,<4.0a0
+  - unixodbc >=2.3.14,<2.4.0a0
+  license: BSL-1.0
+  license_family: OTHER
+  purls: []
+  size: 5451307
+  timestamp: 1774358312988
 - conda: https://conda.anaconda.org/conda-forge/linux-64/poppler-24.12.0-hd7b24de_2.conda
   sha256: 652662cff52c454f9335664b6265859e38c3a524285111b70c0070fac91113dd
   md5: 118f04b26127d5da77a7e1ee99087c73
@@ -13319,6 +13359,27 @@ packages:
   license: BSD-3-Clause
   size: 19829
   timestamp: 1736205330450
+- conda: https://conda.anaconda.org/robostack-staging/linux-64/ros-humble-ros-testing-0.4.0-np126py311h2c3b307_7.conda
+  sha256: ebf6d37e59cb9b07bb7c5d37990396f89ad5f3edb24121a32abf07516945ddc6
+  md5: 4379888507a2aa680fc3445f47d1bf01
+  depends:
+  - python
+  - ros-humble-launch-testing
+  - ros-humble-launch-testing-ament-cmake
+  - ros-humble-launch-testing-ros
+  - ros-humble-ros-workspace
+  - ros-humble-ros2test
+  - ros2-distro-mutex 0.6.* humble_*
+  - libstdcxx >=14
+  - libgcc >=14
+  - __glibc >=2.17,<3.0.a0
+  - libgcc >=14
+  - ros2-distro-mutex >=0.6.0,<0.7.0a0
+  - numpy >=1.26.4,<2.0a0
+  - python_abi 3.11.* *_cp311
+  license: BSD-3-Clause
+  size: 32725
+  timestamp: 1736211609967
 - conda: https://conda.anaconda.org/robostack-staging/linux-64/ros-humble-ros-workspace-1.0.2-np126py311h2c3b307_9.conda
   sha256: 8bddb8cdc2def1c3ad6b1140e9c243572ea884934391f861ad53589e0aa897f5
   md5: 7f9633981b7c3251d8ee1732a3694909
@@ -13767,6 +13828,29 @@ packages:
   license: BSD-3-Clause
   size: 41414
   timestamp: 1736211135341
+- conda: https://conda.anaconda.org/robostack-staging/linux-64/ros-humble-ros2test-0.4.0-np126py311h2c3b307_7.conda
+  sha256: b69e703730f703acfc93758c7780b547d17dc6549de24b5b5a9a5306f7a3c332
+  md5: 2bf8ac3f30041d02f8217fe8ba70de9e
+  depends:
+  - python
+  - ros-humble-domain-coordinator
+  - ros-humble-launch
+  - ros-humble-launch-ros
+  - ros-humble-launch-testing
+  - ros-humble-launch-testing-ros
+  - ros-humble-ros-workspace
+  - ros-humble-ros2cli
+  - ros2-distro-mutex 0.6.* humble_*
+  - __glibc >=2.17,<3.0.a0
+  - libgcc >=14
+  - libstdcxx >=14
+  - libgcc >=14
+  - python_abi 3.11.* *_cp311
+  - numpy >=1.26.4,<2.0a0
+  - ros2-distro-mutex >=0.6.0,<0.7.0a0
+  license: BSD-3-Clause
+  size: 31391
+  timestamp: 1736211362012
 - conda: https://conda.anaconda.org/robostack-staging/linux-64/ros-humble-ros2topic-0.18.11-np126py311h2c3b307_7.conda
   sha256: a4366b135a7b816df5c9420365d306a7b6ae670d9aeef28bc29be62d69058be2
   md5: e25c14d5c059c13795f49db31f9ba909
@@ -16622,17 +16706,18 @@ packages:
   purls: []
   size: 1939690
   timestamp: 1747327532502
-- conda: https://conda.anaconda.org/conda-forge/noarch/setuptools-80.9.0-pyhff2d567_0.conda
-  sha256: 972560fcf9657058e3e1f97186cc94389144b46dbdf58c807ce62e83f977e863
-  md5: 4de79c071274a53dcaf2a8c749d1499e
+- conda: https://conda.anaconda.org/conda-forge/linux-64/setuptools-59.8.0-py311h38be061_1.tar.bz2
+  sha256: a0b6022c59934925e73d0c5996b9144d103b4de9a80dfa6901be188266c3a55d
+  md5: 2edd297e9a392593a4d064dc758a10cc
   depends:
-  - python >=3.9
+  - python >=3.11,<3.12.0a0
+  - python_abi 3.11.* *_cp311
   license: MIT
   license_family: MIT
   purls:
   - pkg:pypi/setuptools?source=hash-mapping
-  size: 748788
-  timestamp: 1748804951958
+  size: 1369918
+  timestamp: 1666724504536
 - conda: https://conda.anaconda.org/conda-forge/linux-64/simbody-3.7-h64f3f5a_3.tar.bz2
   sha256: 81d706434034b74e3c11aaa38592386331a6d1839d475b78350b79662ed179e4
   md5: 98c313f0a4916b38fffcc9551961da02
@@ -17093,6 +17178,19 @@ packages:
   - pkg:pypi/unicodedata2?source=compressed-mapping
   size: 408540
   timestamp: 1763054987009
+- conda: https://conda.anaconda.org/conda-forge/linux-64/unixodbc-2.3.14-h69e2008_0.conda
+  sha256: dd5fe5cdd5538e253116b67323ce3024dd42a5b0f161b5201380ed1736abd334
+  md5: c6c242d6c61f6fc3ee50f64c4771d8d7
+  depends:
+  - __glibc >=2.17,<3.0.a0
+  - libgcc >=14
+  - libstdcxx >=14
+  - libedit >=3.1.20250104,<3.2.0a0
+  - libiconv >=1.18,<2.0a0
+  license: LGPL-2.1-only
+  purls: []
+  size: 307887
+  timestamp: 1764772751439
 - pypi: https://files.pythonhosted.org/packages/16/0d/1bae49d4f091f7ae4d16580862173b76bc8d02bcaaf86dae771c080e78c9/ur_rtde-1.6.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl
   name: ur-rtde
   version: 1.6.2
