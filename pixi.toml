@@ -96,6 +96,7 @@ pyspacemouse = ">=2.0.0, <3"
 dynamixel-sdk = ">=4.0.3, <5"
 zarr = ">=3.1.5, <4"
 mcap-protobuf-support = "*"
+foxglove-schemas-protobuf = "*"
 numcodecs = ">=0.16.5, <0.17"
 opencv-python = "*"
 
