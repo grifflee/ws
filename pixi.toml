@@ -20,6 +20,8 @@ scripts = [".pixi.sh"]
 
 [tasks]
 rqt = { cmd = "ros2 run rqt_image_view rqt_image_view" }
+fg = { cmd = "ros2 launch foxglove_bridge foxglove_bridge_launch.xml port:=8765" }
+
 build = {cmd = "cd $PIXI_PROJECT_ROOT && colcon build --cmake-args -DCMAKE_EXE_LINKER_FLAGS=-L$CONDA_PREFIX/lib -DCMAKE_SHARED_LINKER_FLAGS=-L$CONDA_PREFIX/lib -DCMAKE_MODULE_LINKER_FLAGS=-L$CONDA_PREFIX/lib", inputs = ["src"]}
 turtle = {cmd =  "ros2 run turtlesim turtlesim_node", inputs = ["src"]}
 
@@ -99,6 +101,7 @@ mcap-protobuf-support = "*"
 foxglove-schemas-protobuf = "*"
 numcodecs = ">=0.16.5, <0.17"
 opencv-python = "*"
+foxglove-sdk = ">=0.25.1, <0.26"
 
 [dependencies]
 python = ">=3.11,<3.12"
