@@ -20,7 +20,7 @@ scripts = [".pixi.sh"]
 
 [tasks]
 rqt = { cmd = "ros2 run rqt_image_view rqt_image_view" }
-fg = { cmd = "ros2 launch foxglove_bridge foxglove_bridge_launch.xml port:=8765" }
+fg_bridge = { cmd = "ros2 launch foxglove_bridge foxglove_bridge_launch.xml port:=8765" }
 
 build = {cmd = "cd $PIXI_PROJECT_ROOT && colcon build --cmake-args -DCMAKE_EXE_LINKER_FLAGS=-L$CONDA_PREFIX/lib -DCMAKE_SHARED_LINKER_FLAGS=-L$CONDA_PREFIX/lib -DCMAKE_MODULE_LINKER_FLAGS=-L$CONDA_PREFIX/lib", inputs = ["src"]}
 turtle = {cmd =  "ros2 run turtlesim turtlesim_node", inputs = ["src"]}
@@ -62,6 +62,11 @@ FASTDDS_BUILTIN_TRANSPORTS = "UDPv4"
 
 [tasks.xlaunch]
 cmd = "ros2 launch xnodes"
+depends-on = [ "build_xnodes", "setup", ]
+
+# foxglove-style recorder (xnodes/launch/fg_record.launch.py)
+[tasks.fg]
+cmd = "python $PIXI_PROJECT_ROOT/src/xnodes/scripts/run_fg.py"
 depends-on = [ "build_xnodes", "setup", ]
 
 [tasks.build_xnodes]
